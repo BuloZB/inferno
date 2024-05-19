@@ -25,7 +25,7 @@
   "dependencies": {
     "inferno": "1.0.0-beta21",
     "inferno-component": "1.0.0-beta21",
-    "inferno-create-element": "1.0.0-beta21"
+    "inferno-create-element": "1.6.2"
   },
   "devDependencies": {
     "redux": "*"
