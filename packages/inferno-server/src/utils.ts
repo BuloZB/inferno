@@ -10,6 +10,8 @@ export function escapeText(text: string): string {
   }
 
   let result = '';
+  // assigning empty string here tells JIT this is text
+  // eslint-disable-next-line no-useless-assignment
   let escape = '';
   let start = 0;
   let i = 0;

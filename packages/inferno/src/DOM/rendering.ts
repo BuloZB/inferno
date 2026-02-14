@@ -74,7 +74,7 @@ export function renderInternal(
   }
   const lifecycle: Array<() => void> = [];
   const animations: AnimationQueues = new AnimationQueues();
-  let rootInput = (parentDOM as any).$V as VNode | null;
+  const rootInput = (parentDOM as any).$V as VNode | null;
 
   renderCheck.v = true;
 
@@ -93,7 +93,6 @@ export function renderInternal(
         animations,
       );
       (parentDOM as any).$V = input;
-      rootInput = input as VNode;
     }
   } else {
     if (isNullOrUndef(input)) {
@@ -113,7 +112,7 @@ export function renderInternal(
         lifecycle,
         animations,
       );
-      rootInput = (parentDOM as any).$V = input as VNode;
+      (parentDOM as any).$V = input as VNode;
     }
   }
   callAll(lifecycle);

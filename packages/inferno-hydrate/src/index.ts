@@ -203,6 +203,7 @@ function hydrateChildren(
 
     // clear any other DOM nodes, there should be only a single entry for the root
     if ((flags & VNodeFlags.Fragment) === 0) {
+      // eslint-disable-next-line no-useless-assignment
       let nextSibling: Node | null = null;
 
       while (currentNode) {

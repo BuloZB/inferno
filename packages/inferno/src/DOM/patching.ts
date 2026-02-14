@@ -1021,7 +1021,9 @@ function patchKeyedChildrenComplex(
 ): void {
   let aNode: VNode;
   let bNode: VNode;
+  // eslint-disable-next-line no-useless-assignment
   let nextPos: number = 0;
+  // eslint-disable-next-line no-useless-assignment
   let i: number = 0;
   let aStart: number = j;
   const bStart: number = j;
@@ -1213,6 +1215,8 @@ let maxLen = 0;
 // https://en.wikipedia.org/wiki/Longest_increasing_subsequence
 
 function lisAlgorithm(arr: Int32Array): Int32Array {
+  // Assigning number here tells JIT that these variables are numbers
+  /* eslint-disable no-useless-assignment */
   let arrI = 0;
   let i = 0;
   let j = 0;
@@ -1221,6 +1225,7 @@ function lisAlgorithm(arr: Int32Array): Int32Array {
   let v = 0;
   let c = 0;
   const len = arr.length;
+  /* eslint-enable no-useless-assignment */
 
   if (len > maxLen) {
     maxLen = len;

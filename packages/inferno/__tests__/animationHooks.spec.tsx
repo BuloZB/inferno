@@ -1452,14 +1452,13 @@ function factory(spyer?: jasmine.Spy) {
 }
 
 function generateKeyNodes(array: Array<string | number>, spyer?) {
-  let i: number = 0;
   let id: string | number;
   let key: string | number;
   const children: InfernoNode[] = [];
   let newKey: string | number | null;
   const Tag = factory(spyer);
 
-  for (i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     id = key = array[i];
     if (key !== null && (typeof key !== 'string' || key[0] !== '#')) {
       newKey = key;
